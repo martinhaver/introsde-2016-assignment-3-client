@@ -1,0 +1,338 @@
+Server URL: http://whispering-dawn-27156.herokuapp.com/ws/people?wsdl
+Request #1: readPersonList()
+- Info: return the list of all the people in the database
+- Result: OK, the list holds 7 elements
+
+Person ID=1
+- First Name: Martin
+- Last Name: Haver Suffix Suffix Suffix Suffix Suffix
+- Email: random1.email@gmail.com
+- Date of birth: 02/08/1993
+- Current measure: 
+	Measure ID=2
+	- Measure Type: weight
+	- Value: 95
+	- Data type : double
+	- Date of registration: 28/11/2016
+
+	Measure ID=13
+	- Measure Type: height
+	- Value: 185
+	- Data type : integer
+	- Date of registration: 19/01/2017
+
+***********************
+Person ID=2
+- First Name: Barack
+- Last Name: Obama
+- Email: random2.email@gmail.com
+- Date of birth: 09/10/2010
+- Current measure: 
+	Measure ID=8
+	- Measure Type: weight
+	- Value: 70
+	- Data type : double
+	- Date of registration: 30/11/2016
+
+	Measure ID=10
+	- Measure Type: height
+	- Value: 160
+	- Data type : integer
+	- Date of registration: 30/11/2016
+
+***********************
+Person ID=3
+- First Name: Santa
+- Last Name: Claus
+- Email: random3.email@gmail.com
+- Date of birth: 09/12/1993
+- Current measure: 
+	Measure ID=5
+	- Measure Type: height
+	- Value: 184
+	- Data type : double
+	- Date of registration: 28/11/2016
+
+***********************
+Person ID=4
+- First Name: Zinedine
+- Last Name: Zidane
+- Email: random4.email@gmail.com
+- Date of birth: 06/08/1993
+- Current measure: 
+	Measure ID=7
+	- Measure Type: height
+	- Value: 178
+	- Data type : integer
+	- Date of registration: 30/11/2016
+
+***********************
+Person ID=5
+- First Name: Marcel
+- Last Name: Haver
+- Email: random5.email@gmail.com
+- Date of birth: 06/08/1993
+- Current measure: 
+	Measure ID=6
+	- Measure Type: weight
+	- Value: 98
+	- Data type : double
+	- Date of registration: 28/11/2016
+
+***********************
+Person ID=6
+- First Name: Parov
+- Last Name: Stelar
+- Email: random6.email@gmail.com
+- Date of birth: 31/07/1993
+- Current measure: 
+	Measure ID=9
+	- Measure Type: weight
+	- Value: 99
+	- Data type : integer
+	- Date of registration: 30/11/2016
+
+***********************
+Person ID=7
+- First Name: R2
+- Last Name: D2
+- Email: random7.email@gmail.com
+- Date of birth: 06/08/1993
+- Current measure: 
+	Measure ID=11
+	- Measure Type: weight
+	- Value: 120
+	- Data type : integer
+	- Date of registration: 30/11/2016
+
+
+**********************************
+
+Request #2: readPerson(int id)
+- Info: return the personal information and the current measures of the first Person in db (id=1)
+- Result: OK, Found Person by id =1
+
+Person ID=1
+- First Name: Martin
+- Last Name: Haver Suffix Suffix Suffix Suffix Suffix
+- Email: random1.email@gmail.com
+- Date of birth: 02/08/1993
+- Current measure: 
+	Measure ID=2
+	- Measure Type: weight
+	- Value: 95
+	- Data type : double
+	- Date of registration: 28/11/2016
+
+	Measure ID=13
+	- Measure Type: height
+	- Value: 185
+	- Data type : integer
+	- Date of registration: 19/01/2017
+
+
+**********************************
+
+Request #3: updatePerson(Person p)
+- Info: update last name
+- Result: OK, The lastname is changed
+
+Person ID=1
+- First Name: Martin
+- Last Name: Haver Suffix Suffix Suffix Suffix Suffix Suffix
+- Email: random1.email@gmail.com
+- Date of birth: 02/08/1993
+- Current measure: 
+	Measure ID=2
+	- Measure Type: weight
+	- Value: 95
+	- Data type : double
+	- Date of registration: 28/11/2016
+
+	Measure ID=13
+	- Measure Type: height
+	- Value: 185
+	- Data type : integer
+	- Date of registration: 19/01/2017
+
+
+**********************************
+
+Request #4: createPerson(Person p)
+- Info: create a new Person with the personal information and current healtprofile and return it
+- Result: OK, Create person with id =800
+
+Person ID=800
+- First Name: John
+- Last Name: Galt
+- Email: johngalt@email.com
+- Date of birth: 03/03/1890
+- Current measure: 
+	Measure ID=22
+	- Measure Type: weight
+	- Value: 100
+	- Data type : integer
+	- Date of registration: 01/01/1930
+
+
+**********************************
+
+Request #5: deletePerson(int id)
+- Info: cancel the Person created in the request #4 with id=800
+- Result: OK,the person with id 800 was deleted 
+
+Person ID=800
+- First Name: John
+- Last Name: Galt
+- Email: johngalt@email.com
+- Date of birth: 03/03/1890
+- Current measure: 
+	Measure ID=22
+	- Measure Type: weight
+	- Value: 100
+	- Data type : integer
+	- Date of registration: 01/01/1930
+
+
+**********************************
+
+Request #6: readPersonHistory(Long id, String measureType)
+- Info: return the list of values (the history) of weight for Person with id=1
+- Result: OK,the person has 2 weight 
+
+Measure ID=1
+	- Measure Type: weight
+	- Value: 100
+	- Data type : double
+	- Date of registration: 09/08/2016
+Measure ID=2
+	- Measure Type: weight
+	- Value: 95
+	- Data type : double
+	- Date of registration: 28/11/2016
+
+**********************************
+
+Request #7: readMeasureTypes()
+- Info: return the list of all measures in the database
+- Result: OK, there are 16 measure in the database 
+
+Measure ID=1
+	- Measure Type: weight
+	- Value: 100
+	- Data type : double
+	- Date of registration: 09/08/2016
+Measure ID=2
+	- Measure Type: weight
+	- Value: 95
+	- Data type : double
+	- Date of registration: 28/11/2016
+Measure ID=3
+	- Measure Type: height
+	- Value: 190
+	- Data type : integer
+	- Date of registration: 30/11/2016
+Measure ID=4
+	- Measure Type: height
+	- Value: 205
+	- Data type : integer
+	- Date of registration: 28/11/2016
+Measure ID=5
+	- Measure Type: height
+	- Value: 184
+	- Data type : double
+	- Date of registration: 28/11/2016
+Measure ID=6
+	- Measure Type: weight
+	- Value: 98
+	- Data type : double
+	- Date of registration: 28/11/2016
+Measure ID=7
+	- Measure Type: height
+	- Value: 178
+	- Data type : integer
+	- Date of registration: 30/11/2016
+Measure ID=8
+	- Measure Type: weight
+	- Value: 70
+	- Data type : double
+	- Date of registration: 30/11/2016
+Measure ID=9
+	- Measure Type: weight
+	- Value: 99
+	- Data type : integer
+	- Date of registration: 30/11/2016
+Measure ID=10
+	- Measure Type: height
+	- Value: 160
+	- Data type : integer
+	- Date of registration: 30/11/2016
+Measure ID=11
+	- Measure Type: weight
+	- Value: 120
+	- Data type : integer
+	- Date of registration: 30/11/2016
+Measure ID=13
+	- Measure Type: height
+	- Value: 185
+	- Data type : integer
+	- Date of registration: 19/01/2017
+Measure ID=15
+	- Measure Type: height
+	- Value: 185
+	- Data type : integer
+	- Date of registration: 19/01/2017
+Measure ID=17
+	- Measure Type: height
+	- Value: 185
+	- Data type : integer
+	- Date of registration: 19/01/2017
+Measure ID=19
+	- Measure Type: height
+	- Value: 185
+	- Data type : integer
+	- Date of registration: 19/01/2017
+Measure ID=21
+	- Measure Type: height
+	- Value: 185
+	- Data type : integer
+	- Date of registration: 19/01/2017
+
+**********************************
+
+Request #8: readPersonMeasure(Long id, String measureType, Long mid)
+- Info: return the measure with mid=1 and type=weight for Person with id=1
+- Result: OK, Found Measure by mid =1
+
+Measure ID=1
+	- Measure Type: weight
+	- Value: 100
+	- Data type : double
+	- Date of registration: 09/08/2016
+
+**********************************
+
+Request #9: savePersonMeasure(Long id, Measure m)
+- Info: save a new measure of Person identified with id=1 and archive the old value in the history
+- Result: OK, New Measure with mid =23
+
+Measure ID=23
+	- Measure Type: weight
+	- Value: 91
+	- Data type : integer
+	- Date of registration: 19/01/2017
+
+**********************************
+
+Request #10: updatePersonMeasure(Long id, Measure m)
+- Info: update the value of the measure created in request #9, the new value is 101
+- Result: OK, the value is changed at 101
+
+Measure ID=23
+	- Measure Type: weight
+	- Value: 101
+	- Data type : integer
+	- Date of registration: 19/01/2017
+
+**********************************
+
